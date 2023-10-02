@@ -34,3 +34,8 @@ code /etc/hosts
     ```
         thisisunsafe
     ```
+
+
+# Local System K8S System Working :
+
+![Alt text](https://file%252B.vscode-resource.vscode-cdn.net/Users/abhishek.chaturvedi/Documents/poc/nextjs-nodejs-microservice-gc-stripe-natsserver-npmodule-mongodb-jwt-redis-docker-k8s-clouddply/diagrams/Screenshot%25202023-10-02%2520at%25207.39.25%2520PM.png?version%253D1696255852431)
