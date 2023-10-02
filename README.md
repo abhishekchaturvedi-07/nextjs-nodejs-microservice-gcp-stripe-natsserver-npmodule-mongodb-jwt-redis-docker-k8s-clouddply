@@ -44,3 +44,6 @@ code /etc/hosts
 # Cloud System K8S System Working (GCP):
 *WITH SYNCED SECTION*
 <img width="798" alt="Screenshot 2023-10-02 at 7 47 50 PM" src="https://github.com/abhishekchaturvedi-07/nextjs-nodejs-microservice-gcp-stripe-natsserver-npmodule-mongodb-jwt-redis-docker-k8s-clouddply/assets/15727082/db46cac2-31c9-4f89-8ac8-8bfd6c36ba1f">
+
+*WITH UNSYNCED SECTION*
+<img width="867" alt="Screenshot 2023-10-02 at 7 49 27 PM" src="https://github.com/abhishekchaturvedi-07/nextjs-nodejs-microservice-gcp-stripe-natsserver-npmodule-mongodb-jwt-redis-docker-k8s-clouddply/assets/15727082/50eedf38-89fc-4907-b671-8ec8573edce4">
