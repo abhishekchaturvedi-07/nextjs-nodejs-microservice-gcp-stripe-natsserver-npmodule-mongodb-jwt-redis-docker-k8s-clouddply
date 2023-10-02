@@ -5,3 +5,4 @@
 4- @types/express *https://www.npmjs.com/package/@types/express*
 5- ***tsc init for zsh*** -> **npx --package typescript tsc --init** *OR Install -g*
 6- chalk - *https://www.npmjs.com/package/chalk*
+7- docker *installation via DockerFile, create the image and build to DockerHub*
