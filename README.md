@@ -15,3 +15,22 @@ Update the start script to the following:
 
 ts-node-dev --poll src/index.ts
 ```
+
+## HOST FILE UPDATE WRT this application
+**MACOS/LINUX** -> etc/hosts
+*WINDOWS* -> C:/Windows/System32/Drivers/etc/hosts
+```
+code /etc/hosts
+```
+
+# By default, Ingress Enginer X is a web server thats going to try to use an HTTPS connection. 
+  *By default, it uses a SELF SIGN CERTIFICATE*
+  *CHROME doesnt supports the server who used SELF SIGNED CERTIFICATES*
+    ```
+        KUBERNETES INGRESS CONTROLLER FAKE CERTIFICATE
+    ```
+    *INGRESS SERVER has some configuration where you will not be able to circumvent the error screen too*
+    *Only option is by typing anywhere on the tab by*
+    ```
+        thisisunsafe
+    ```
