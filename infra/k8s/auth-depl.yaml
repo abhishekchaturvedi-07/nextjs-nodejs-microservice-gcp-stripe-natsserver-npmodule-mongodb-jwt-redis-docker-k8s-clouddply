@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: auth
-        image: codewithac/e2eapp/auth
+        image: us.gcr.io/acticketing-dev-400816/auth
 ---
 apiVersion: v1
 kind: Service

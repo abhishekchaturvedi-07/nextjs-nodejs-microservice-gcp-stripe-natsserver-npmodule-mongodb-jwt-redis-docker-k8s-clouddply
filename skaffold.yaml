@@ -5,10 +5,12 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  local:
-    push: false
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: acticketing-dev-400816
   artifacts:
-    - image: codewithac/e2eapp/auth
+    - image: us.gcr.io/acticketing-dev-400816/auth
       context: auth
       docker:
         dockerfile: Dockerfile
