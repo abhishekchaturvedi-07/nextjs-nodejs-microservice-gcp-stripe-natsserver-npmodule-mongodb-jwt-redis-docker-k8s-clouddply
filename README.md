@@ -49,12 +49,12 @@ code /etc/hosts
 <img width="867" alt="Screenshot 2023-10-02 at 7 49 27 PM" src="https://github.com/abhishekchaturvedi-07/nextjs-nodejs-microservice-gcp-stripe-natsserver-npmodule-mongodb-jwt-redis-docker-k8s-clouddply/assets/15727082/50eedf38-89fc-4907-b671-8ec8573edce4">
 
 # Google Cloud Platform - Installation and Creation
-Project : acticketing-dev
-New Account : codewith ac 
-URL : https://console.cloud.google.com/home/dashboard?project=acticketing-dev-400816
-Install Gcloud SDK and cLI : https://cloud.google.com/sdk/docs/downloads-interactive?hl=en
+*Project : acticketing-dev*
+*New Account : codewith ac*
+*URL : https://console.cloud.google.com/home/dashboard?project=acticketing-dev-400816
+**Install Gcloud SDK and cLI : https://cloud.google.com/sdk/docs/downloads-interactive?hl=en**
 Login to system : gcloud auth login
-Initialize the Google Cloud Platform in System: gcloud init
+*Initialize the Google Cloud Platform in System: gcloud init
 Install GC Context : gcloud components install kubectl
 Run: gcloud container clusters get-credentials <cluster_name>
 Can Cross check in docker desktop that new context cluster from GCP is running on the system and will not get any pod when run kubectl get pods
