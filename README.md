@@ -38,4 +38,4 @@ code /etc/hosts
 
 # Local System K8S System Working :
 
-![Alt text]([https://file%252B.vscode-resource.vscode-cdn.net/Users/abhishek.chaturvedi/Documents/poc/nextjs-nodejs-microservice-gc-stripe-natsserver-npmodule-mongodb-jwt-redis-docker-k8s-clouddply/diagrams/Screenshot%25202023-10-02%2520at%25207.39.25%2520PM.png?version%253D1696255852431](https://github.com/abhishekchaturvedi-07/nextjs-nodejs-microservice-gcp-stripe-natsserver-npmodule-mongodb-jwt-redis-docker-k8s-clouddply/blob/abhishekchaturvedi-e2esystem-main/diagrams/Screenshot%202023-10-02%20at%207.39.25%20PM.png?raw=true))
+<img width="1012" alt="Screenshot 2023-10-02 at 7 39 25 PM" src="https://github.com/abhishekchaturvedi-07/nextjs-nodejs-microservice-gcp-stripe-natsserver-npmodule-mongodb-jwt-redis-docker-k8s-clouddply/assets/15727082/78a1a25c-0f0c-4c86-8b08-9efe842e911b">
