@@ -3,8 +3,8 @@
 
 ## *NOTE*
 **Note on Code Reloading**
-```If 
-you did not see your server restart after changing the index.ts file, do the following:
+```
+If incase, you did not see your server restart after changing the index.ts file, do the following:
 
 Open the package.json file in the ‘auth’ directory
 
