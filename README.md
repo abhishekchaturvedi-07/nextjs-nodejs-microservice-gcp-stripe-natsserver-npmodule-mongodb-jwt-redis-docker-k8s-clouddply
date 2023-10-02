@@ -59,5 +59,10 @@ Install GC Context : gcloud components install kubectl
 Run: gcloud container clusters get-credentials <cluster_name>  
 Can Cross check in docker desktop that new context cluster from GCP is running on the system and will not get any pod when run kubectl get pods  
 
-
+# Google Cloud Build
+**Enable GCB**
+Update skaffold.yaml to use GCB  
+Setup ingress-nginx on google cloud cluster -> kubernetes.github.io/ingress-nginx  
+Update host file again to point to remote cluster  
+Restart skaffold  
 
