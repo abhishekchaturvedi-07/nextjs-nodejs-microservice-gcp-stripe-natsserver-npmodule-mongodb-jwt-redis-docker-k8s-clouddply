@@ -62,7 +62,21 @@ Can Cross check in docker desktop that new context cluster from GCP is running o
 # Google Cloud Build
 **Enable GCB**
 Update skaffold.yaml to use GCB  
-Setup ingress-nginx on google cloud cluster -> kubernetes.github.io/ingress-nginx  
-Update host file again to point to remote cluster  
-Restart skaffold  
+Setup ingress-nginx on google cloud cluster -> kubernetes.github.io/ingress-nginx -> 
+```
+"kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml"  
+"kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml"   
+```
+This will create Ingress NginX and a lot of services and deployment needed for GCE and GKE  
+Ingress NginX will automatically create the Load Balancer for us : just visit the Networking Setting -> Load Balancing and copy the IP address they are providing to interact with the Ingress NginX Controller
+Update host file again to point to remote cluster  -> code /etc/hosts
+Restart skaffold  -> Skaffold dev  
 
+# Docker Login Issue Resolution
+```
+If got stuck :  
+Just logout. From “docker logout”  
+And build and push the image and do the login via “docker login -u "username" -p "password" docker.io”  
+And push again  
+It will work   
+```
