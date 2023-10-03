@@ -97,4 +97,30 @@ It will work
 *Wrap the connection with try catch for any sort of connectivity error*  
 *Wrap the same with the listener for the traffic if connected successfully*  
 *Create Mongoose Model to connect with Mongo DB*  
+```
+*MONGOOSE USER MODEL --> Represent the entire collection of data in MONGODB*  
+*MONGOOSE USER DOCUMENT --> Represent the single user data in MONGODB*
+```
+# Typescript and Mongoose Conflicts
+*Moongoose will not allow to do the typescripting like Typescript when do new User*  
+*To integrate Typescript with Mongoose follow the belows steps->*   
+*// An interface that describes the properties, that are required to create a new user //*  
+```
+***Create and Interface***
+    interface UserAttrs{
+        email: string;
+        password: string;
+    }
+***Create a new function buildUser and pass created Interface as argument and return with Mongoose new User***
+    const buildUser = ( attrs: UserAttrs ) => {
+        return new User(attrs)
+    }
+***And then initiate the object like this***
+    buildUser({
+        email: 'foo@example.com',
+        password: 'adfdaf'
+    })
+```
+This way you can integrate TS with Mongoose  
+
 
