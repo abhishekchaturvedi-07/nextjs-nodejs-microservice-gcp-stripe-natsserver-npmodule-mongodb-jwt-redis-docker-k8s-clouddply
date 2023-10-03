@@ -32,10 +32,10 @@ const buildUser = ( attrs: UserAttrs) => {
     return new User(attrs)
 }
 
-buildUser({
-    email: "asds",
-    password: "sds",
-    // asdsad:2323 <- will trow an error
-})
+// buildUser({
+//     email: "asds",
+//     password: "sds",
+//     // asdsad:2323 <- will trow an error
+// })
 
-export {User}
+export {User, buildUser} 
