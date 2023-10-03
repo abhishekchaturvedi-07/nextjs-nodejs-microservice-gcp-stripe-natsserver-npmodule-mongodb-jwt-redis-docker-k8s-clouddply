@@ -1,6 +1,7 @@
 import {body, validationResult} from 'express-validator'
 import express, {Request, Response} from 'express';
 
+import { BadRequestError } from '../errors/bad-request-error';
 import { RequestValidationError } from '../errors/request-validation-error';
 import { User } from '../models/user'; // <- To connect to the database
 
@@ -62,8 +63,9 @@ router.post('/api/users/signup',[
 
     if(existingUser)
     {
-      console.log("Email already exists", email);
-      return res.send(email+' <- already exists');
+      // console.log("Email already exists", email);
+      // return res.send(email+' <- already exists');
+      throw new BadRequestError('Email already exists')
     }
    
     // Create new user and save it to database
