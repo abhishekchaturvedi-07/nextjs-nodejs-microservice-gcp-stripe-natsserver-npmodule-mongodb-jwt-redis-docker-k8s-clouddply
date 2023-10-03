@@ -82,7 +82,7 @@ It will work
 ```
 
 # Error Handling
-*Created Error Handling Class with Abstract Class just like the Interface in Typescript*
-*Extend all the other error classes with the Abstract Class*
-*Catching up all the errors from Middleware - Error Handler*
-*Then integrated with the required service*
+*Created Error Handling Class with Abstract Class just like the Interface in Typescript*  
+*Extend all the other error classes with the Abstract Class*  
+*Catching up all the errors from Middleware - Error Handler*  
+*Then integrated with the required service*  
