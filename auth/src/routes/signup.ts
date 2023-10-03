@@ -71,7 +71,7 @@ router.post('/api/users/signup',[
     // Create new user and save it to database
 
     const user = User.build({email, password})
-    await user.save()  // <-To save user to database
+    await user.save()  // <-To save user to database 
     console.log("New User created", user)
     res.status(201).send(user)
 

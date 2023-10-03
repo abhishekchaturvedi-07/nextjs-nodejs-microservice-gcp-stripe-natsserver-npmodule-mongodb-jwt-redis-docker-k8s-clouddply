@@ -124,3 +124,10 @@ It will work
 This way you can integrate TS with Mongoose  
 
 
+#Promisify Library from utils
+*To make the callback based function and turn it into Promised based implementation (which will be compatible with using Async-Await)*  
+```
+scrypt is callback based
+to convert that we can use promisify
+const scryptAsync = promisify(scrypt)
+```
