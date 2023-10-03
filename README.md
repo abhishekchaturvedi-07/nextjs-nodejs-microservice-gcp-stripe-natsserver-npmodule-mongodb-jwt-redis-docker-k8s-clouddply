@@ -86,3 +86,15 @@ It will work
 *Extend all the other error classes with the Abstract Class*  
 *Catching up all the errors from Middleware - Error Handler*  
 *Then integrated with the required service*  
+
+# MongoDB
+*Install Mongoose*    
+*Create Mongo DB Instance*    
+*Use Docker Default MongoDB Image*  
+*Create MongoDb Deply and Serv*  
+*Check if Pod started working*  
+*Connect to Mongodb in Auth Index file*  
+*Wrap the connection with try catch for any sort of connectivity error*  
+*Wrap the same with the listener for the traffic if connected successfully*  
+*Create Mongoose Model to connect with Mongo DB*  
+

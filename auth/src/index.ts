@@ -7,6 +7,7 @@ import { currentUserRouter } from './routes/current-user';
 import { errorHandler } from './middlewares/error-handler';
 import express from 'express';
 import {json} from 'body-parser'
+import mongoose from 'mongoose';
 import { signinRouter } from './routes/signin';
 import { signoutRouter } from './routes/signout';
 import { signupRouter } from './routes/signup';
@@ -40,25 +41,46 @@ app.use(errorHandler)
 // MIDDLEWARE
 // app.use(json())
 
+const start = async () => {
+    try
+    {
+        await mongoose.connect('mongodb://auth-mongo-srv:27017/auth',
+        // New Version Mongoose does not support this option object
+        // {
+        //     useNewUrlParser: true,
+        //     useUnifiedTopology: true,
+        //     useCreateIndex: true
+        // }
+        )
+        console.log('Connected to MongoDB')
+    } catch (error) {
+        console.error(error)
+    }
 
-// LISTENING
-app.listen(3000, () => {
-    console.log(
-        chalk.green(
-            chalk.bgGreen(
-                'AUTH ' 
-            )
-            +
-            chalk.hex('#FFA500')(
-                ' ---> '
-            )
-            +
-            chalk.blue.underline.bold(
-                'Listening on PORT'
-            )
-            +
-            chalk.italic.hex('#FFA500')(
-                ' 3000!!!' 
-            )
-    ));
-})
+
+
+        // LISTENING
+        app.listen(3000, () => {
+            console.log(
+                chalk.green(
+                    chalk.bgGreen(
+                        'AUTH ' 
+                    )
+                    +
+                    chalk.hex('#FFA500')(
+                        ' ---> '
+                    )
+                    +
+                    chalk.blue.underline.bold(
+                        'Listening on PORT'
+                    )
+                    +
+                    chalk.italic.hex('#FFA500')(
+                        ' 3000!!!' 
+                    )
+            ));
+        })
+
+}
+
+start()
