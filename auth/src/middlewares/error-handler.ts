@@ -1,4 +1,5 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
+
 import { CustomError } from '../errors/custom-error';
 
 export const errorHandler = (
@@ -7,6 +8,7 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
+  // Only single instance of error handler
   if (err instanceof CustomError) {
     return res.status(err.statusCode).send({ errors: err.serializeErrors() });
   }

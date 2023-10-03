@@ -79,13 +79,13 @@ const User = mongoose.model<UserDoc, UserModel>('User', userSchema)
 // })
 
 
-const user = User.build({
-    email: "asd@sd.sd",
-    password: "sdsad"
-})
+// const user = User.build({
+//     email: "asd@sd.sd",
+//     password: "sdsad"
+// })
 
-user.email
-user.password
+// user.email
+// user.password
 // user.createdAt <- throw an error
 
 
