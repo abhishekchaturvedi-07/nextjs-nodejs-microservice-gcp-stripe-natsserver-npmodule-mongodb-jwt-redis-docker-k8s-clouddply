@@ -131,3 +131,22 @@ scrypt is callback based
 to convert that we can use promisify
 const scryptAsync = promisify(scrypt)
 ```
+
+## Special : If in case facing docker denied issue:
+logout from docker  :  
+```
+docker logout
+```
+build docker image like this:  
+```
+docker build -t imagename:imagename  
+docker image ls
+docker push username/imagename:imagename
+``` 
+again you will see docker denied access, then login and push     
+```
+docker login -u "user_name" -p "original_password" docker.io
+docker push username/imagename:imagename
+```
+DON3 :)   
+
