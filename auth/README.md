@@ -10,4 +10,7 @@
 9- express-async-errors - *https://www.npmjs.com/package/express-async-errors*  
 10- mongoose - *https://www.npmjs.com/package/mongoose*  
 11- cookie-session middleware and @types/cookie-session - *https://www.npmjs.com/package/cookie-session*  
-12- jsonwebtoked & @types/jsonwebtoken - *https://www.npmjs.com/package/jsonwebtoken*
+12- jsonwebtoked & @types/jsonwebtoken - *https://www.npmjs.com/package/jsonwebtoken*   
+13- @types/jest jest ts-jest *https://www.npmjs.com/package/jest*  
+14- @types/supertest  supertest *https://www.npmjs.com/package/supertest*  
+15- mongodb-memory-server *https://www.npmjs.com/package/mongodb-memory-server*  
