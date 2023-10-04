@@ -6,6 +6,9 @@ let mongo: any
 
 //Hook function -> whatever we pass inside here will going to run before all of our tests start to be executed
 beforeAll(async () => {
+
+    process.env.JWT_KEY = 'random'
+
     mongo = await MongoMemoryServer.create();
     const mongoUri = mongo.getUri();
 
