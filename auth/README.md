@@ -9,3 +9,5 @@
 8- express validator - *https://www.npmjs.com/package/express-validator*  
 9- express-async-errors - *https://www.npmjs.com/package/express-async-errors*  
 10- mongoose - *https://www.npmjs.com/package/mongoose*  
+11- cookie-session middleware and @types/cookie-session - *https://www.npmjs.com/package/cookie-session*  
+12- jsonwebtoked & @types/jsonwebtoken - *https://www.npmjs.com/package/jsonwebtoken*

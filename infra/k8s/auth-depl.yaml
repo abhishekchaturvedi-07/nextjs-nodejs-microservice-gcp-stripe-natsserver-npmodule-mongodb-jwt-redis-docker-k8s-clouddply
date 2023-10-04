@@ -15,6 +15,14 @@ spec:
       containers:
       - name: auth
         image: us.gcr.io/acticketing-dev-400816/auth
+        # SET JWT as Env Varibale for this cluster image
+        env: 
+          - name: JWT_KEY
+            valueFrom:
+              secretKeyRef:
+                name: jwt-secret
+                key: JWT_KEY
+
 ---
 apiVersion: v1
 kind: Service

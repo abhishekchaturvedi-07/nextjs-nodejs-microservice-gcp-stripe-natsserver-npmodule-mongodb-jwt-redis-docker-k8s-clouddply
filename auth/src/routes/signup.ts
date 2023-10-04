@@ -1,9 +1,10 @@
-import {body, validationResult} from 'express-validator'
 import express, {Request, Response} from 'express';
 
 import { BadRequestError } from '../errors/bad-request-error';
-import { RequestValidationError } from '../errors/request-validation-error';
 import { User } from '../models/user'; // <- To connect to the database
+import {body} from 'express-validator'
+import jwt from 'jsonwebtoken'
+import { validateRequest } from '../middlewares/validate-request';
 
 // import { DatabaseConnectionError } from '../errors/database-connection-error'; <- No needed because no it will be handled by User model
 
@@ -20,6 +21,7 @@ router.post('/api/users/signup',[
       .isLength({ min: 4, max: 20 })
       .withMessage("Password must be between 4 and 20 characters"),
   ], 
+  validateRequest,
   async (req : Request, res: Response) => {
     
     // res.send('Hello There from Sign Up Router')
@@ -41,12 +43,15 @@ router.post('/api/users/signup',[
     // console.log('Creating a user...', req.body)
     // res.send({})
 
-    const errors = validationResult(req);
+    // Calling from middleware
+    // const errors = validationResult(req);
 
-    if (!errors.isEmpty()) {
-      throw new RequestValidationError(errors.array());
-    }
+    // if (!errors.isEmpty()) {
+    //   throw new RequestValidationError(errors.array());
+    // }
+    // Emd Calling from Middleware
 
+    
     // No needed to test like this 
     // console.log("Creating a user...");
     // throw new DatabaseConnectionError();
@@ -73,6 +78,21 @@ router.post('/api/users/signup',[
     const user = User.build({email, password})
     await user.save()  // <-To save user to database 
     console.log("New User created", user)
+
+    // Generate JWT token
+    
+    const userJWT = jwt.sign({
+      id: user.id,
+      email: user.email
+    }, 
+    process.env.JWT_KEY!
+    )
+
+    // Store it on session object
+    req.session = {
+      jwt: userJWT
+    }
+
     res.status(201).send(user)
 
 })

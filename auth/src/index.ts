@@ -3,6 +3,7 @@ const chalk = require('chalk');
 import 'express-async-errors'
 
 import { NotFoundError } from './errors/not-found-error';
+import cookieSession from 'cookie-session';
 import { currentUserRouter } from './routes/current-user';
 import { errorHandler } from './middlewares/error-handler';
 import express from 'express';
@@ -14,8 +15,14 @@ import { signupRouter } from './routes/signup';
 
 const app = express()
 
+app.set('trust proxy', true)
+
 //METHODS - ROUTERS
 app.use(json())
+app.use(cookieSession({
+    signed: false,
+    secure: true
+}))
 app.use(currentUserRouter)
 app.use(signinRouter)
 app.use(signoutRouter)
@@ -40,6 +47,11 @@ app.use(errorHandler)
 
 // MIDDLEWARE
 // app.use(json())
+
+// CHeck the env variable 
+if(!process.env.JWT_KEY){
+    throw new Error("JWT Key must be defined")
+}
 
 const start = async () => {
     try
