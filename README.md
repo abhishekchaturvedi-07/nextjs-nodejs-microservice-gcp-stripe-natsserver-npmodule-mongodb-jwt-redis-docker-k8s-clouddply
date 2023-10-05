@@ -148,9 +148,9 @@ again you will see docker denied access, then login and push
 docker login -u "user_name" -p "original_password" docker.io
 docker push username/imagename:imagename
 ```
-DON3 :)   
+DON3 :)    
 
-5Oct -> JWT /  Cookie Session  / Env Varibale + New Middleware to tackle the auth/un-auth users + All other logic for Aign in / Sign out and / Current User | TEST - Jest + Supertest - mock call for express
+5Oct -> JWT /  Cookie Session  / Env Varibale + New Middleware to tackle the auth/un-auth users + All other logic for Aign in / Sign out and / Current User | TEST - Jest + Supertest - mock call for express  
 
 
-
+6OCt -> Setup Server Side Rendering (Next.js) in the context of microservices
