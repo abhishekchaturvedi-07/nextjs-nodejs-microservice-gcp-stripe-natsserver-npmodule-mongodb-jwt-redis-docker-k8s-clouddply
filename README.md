@@ -150,3 +150,7 @@ docker push username/imagename:imagename
 ```
 DON3 :)   
 
+5Oct -> JWT /  Cookie Session  / Env Varibale + New Middleware to tackle the auth/un-auth users + All other logic for Aign in / Sign out and / Current User | TEST - Jest + Supertest - mock call for express
+
+
+
