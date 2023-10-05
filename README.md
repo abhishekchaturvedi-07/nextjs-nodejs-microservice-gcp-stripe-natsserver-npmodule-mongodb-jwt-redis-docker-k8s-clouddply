@@ -139,7 +139,9 @@ docker logout
 ```
 build docker image like this:  
 ```
-docker build -t imagename:imagename  
+docker build -t imagename  
+docker image ls
+docker tag imagename username/imagename:imagename
 docker image ls
 docker push username/imagename:imagename
 ``` 
