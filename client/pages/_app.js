@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 
+import Header from '../components/header';
 import axios from 'axios';
 
 // export default ({ Component, pageProps }) => {
@@ -10,7 +11,8 @@ import axios from 'axios';
 const AppComponent = ({Component, pageProps, currentUser}) => {
   return(
     <div>
-      <h1>Header! {currentUser?currentUser.email:'***'}</h1>
+      {/* <h1>Header! {currentUser?currentUser.email:'***'}</h1> */}
+      <Header currentUser={currentUser} />
       <Component {...pageProps} />
     </div>
   )

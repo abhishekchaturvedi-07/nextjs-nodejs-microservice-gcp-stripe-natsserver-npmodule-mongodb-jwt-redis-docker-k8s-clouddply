@@ -187,3 +187,7 @@ FOR CUSTOM APP COMPONENT
 ```
 context === {Component, cts:{req,res}}
 ```
+
+# Always use try and catch for any errors
+
+# 6OCT -> NPM Organisation and common library

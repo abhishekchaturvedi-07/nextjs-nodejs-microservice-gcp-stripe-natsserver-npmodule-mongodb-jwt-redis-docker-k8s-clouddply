@@ -11,18 +11,18 @@ const LandingPage = ({ currentUser }) => {
     <h1 style={{color:'green'}}>
       You are now logged in with- {currentUser.email}
       </h1>
-      <Link className="navbar-brand" href="/auth/signout" style={{color:'red'}}>
+      {/* <Link className="navbar-brand" href="/auth/signout" style={{color:'red'}}>
         SignOut
-      </Link>
+      </Link> */}
        
     
     </>
   ) : (
     <>
-    <h1> You are successfully logged out!</h1>
-    <Link className="navbar-brand" style={{color:'red'}} href="/auth/signin">
+    <h1> WELCOME to the Portal!</h1>
+    {/* <Link className="navbar-brand" style={{color:'red'}} href="/auth/signin">
         SignIN
-      </Link>
+      </Link> */}
       </>
   )
 };
