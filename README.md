@@ -156,3 +156,34 @@ DON3 :)
 
 
 6OCt -> Setup Server Side Rendering (Next.js) in the context of microservices
+
+
+# Cross NAMESPACE Communication
+```
+http://NAMEOFSERVICE.NAMESPACE_NAME.svc.cluster.local
+kubectl get services
+kubectl get namespace
+kubectl get services -n namespace_name  <-- service inside Namespace
+```
+**Can create a short URL as EXTERNAL NAME SERVICE TO CONNECT DIFFERENT SERVICES EXIST IN DIFFERENT NAMESPACE**   
+```
+http://ingress-nginx-srv 
+for
+http://ingress-nginx.ingress-niginx.svc.cluster.local
+```
+
+
+# Preconfigured Version of Axios : 
+*whenever we need to make a request from a GENINITIALPROP function, first build our client and then use that to make our actual request*  --> follow api -> buildClient.js
+
+
+# MOST INTERESTING PART OF NEXT JS MULTIPLE GETINITIALPROPS
+*if we provide arguments to Getinitial props for a page that will act totally different from argument provided to getInitialProps for any Custom App Component*  
+FOR A PAGE   
+```
+context === {req,res}
+```
+FOR CUSTOM APP COMPONENT   
+```
+context === {Component, cts:{req,res}}
+```
