@@ -1,10 +1,11 @@
+// import { BadRequestError } from '../errors/bad-request-error';
+// import { validateRequest } from '../middlewares/validate-request';    <-- calling from common below
+import { BadRequestError, validateRequest } from '@codewithac/microservice-next-gke-common';
 import express, {Request, Response} from 'express';
 
-import { BadRequestError } from '../errors/bad-request-error';
 import { User } from '../models/user'; // <- To connect to the database
 import {body} from 'express-validator'
 import jwt from 'jsonwebtoken'
-import { validateRequest } from '../middlewares/validate-request';
 
 // import { DatabaseConnectionError } from '../errors/database-connection-error'; <- No needed because no it will be handled by User model
 

@@ -1,11 +1,12 @@
+// import { BadRequestError } from '../errors/bad-request-error';
+// import { validateRequest } from '../middlewares/validate-request';   <-- calling from common below
+import { BadRequestError, validateRequest } from '@codewithac/microservice-next-gke-common';
 import express, { Request, Response } from 'express';
 
-import { BadRequestError } from '../errors/bad-request-error';
 import { Password } from '../services/password';
 import { User } from '../models/user';
 import { body } from 'express-validator';
 import jwt from 'jsonwebtoken';
-import { validateRequest } from '../middlewares/validate-request';
 
 const router = express.Router();
 

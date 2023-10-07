@@ -1,6 +1,9 @@
-import { currentUser } from '../middlewares/current-user';
+// import { currentUser } from '../middlewares/current-user';  <- modifying it to calling it from common library
+import {currentUser, requireAuth} from '@codewithac/microservice-next-gke-common'
+
+// import { requireAuth } from '../middlewares/require-auth'; <-- calling above 
 import express from 'express';
-import { requireAuth } from '../middlewares/require-auth';
+
 const router = express.Router();
 
 router.get('/api/users/currentuser', currentUser, requireAuth, (req, res) => {

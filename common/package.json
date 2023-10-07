@@ -1,12 +1,31 @@
 {
-  "name": "common",
-  "version": "1.0.0",
+  "name": "@codewithac/microservice-next-gke-common",
+  "version": "1.0.18",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "del ./build/*",
+    "build": "npm run clean && npm version patch && tsc",
+    "pub": "git add . && git commit -m \"Updates\"  && npm version patch && npm run build  && npm publish"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/cookie-session": "^2.0.45",
+    "@types/express": "^4.17.18",
+    "@types/jsonwebtoken": "^9.0.3",
+    "cookie-session": "^2.0.0",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2"
+  }
 }

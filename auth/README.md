@@ -14,3 +14,6 @@
 13- @types/jest jest ts-jest *https://www.npmjs.com/package/jest*  
 14- @types/supertest  supertest *https://www.npmjs.com/package/supertest*  
 15- mongodb-memory-server *https://www.npmjs.com/package/mongodb-memory-server*  
+
+# INstalling Common library from NPM JS dot COM
+16- @codewithac/microservice-next-gke-common - *https://www.npmjs.com/package/@codewithac/microservice-next-gke-common*

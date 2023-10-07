@@ -1,9 +1,11 @@
 import 'express-async-errors'
 
-import { NotFoundError } from './errors/not-found-error';
+// import { NotFoundError } from './errors/not-found-error';
+// import { errorHandler } from './middlewares/error-handler';   <<<--- calling from GLOBAL below
+import { NotFoundError, errorHandler } from '@codewithac/microservice-next-gke-common';
+
 import cookieSession from 'cookie-session';
 import { currentUserRouter } from './routes/current-user';
-import { errorHandler } from './middlewares/error-handler';
 import express from 'express';
 import {json} from 'body-parser'
 import { signinRouter } from './routes/signin';
