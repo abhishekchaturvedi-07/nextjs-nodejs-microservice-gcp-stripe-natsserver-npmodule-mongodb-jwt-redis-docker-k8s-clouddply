@@ -12,7 +12,23 @@
     "build": "npm run clean && npm version patch && tsc",
     "pub": "git add . && git commit -m \"Updates\"  && npm version patch && npm run build  && npm publish"
   },
-  "keywords": [],
+  "keywords": [
+    "microservice",
+    "typescript",
+    "react",
+    "del-cli",
+    "react",
+    "node",
+    "cookie",
+    "cookie-session",
+    "jsonwebtoken",
+    "express",
+    "gke",
+    "docker",
+    "kubernetes",
+    "cloud image",
+    "codewithac"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
